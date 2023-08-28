@@ -1,0 +1,82 @@
+/********************栅格5****开始*********************/
+.ant-col-5{
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+
+@media (min-width: 576px) {
+    .ant-col-sm-5{flex: 0 0 20%; max-width: 20%;}
+}
+
+@media (min-width: 768px) {
+    .ant-col-md-5{flex: 0 0 20%; max-width: 20%;}
+}
+
+@media (min-width: 992px) {
+    .ant-col-lg-5{flex: 0 0 20%; max-width: 20%;}
+}
+
+@media (min-width: 1200px) {
+    .ant-col-xl-5{flex: 0 0 20%; max-width: 20%;}
+}
+
+@media (min-width: 1600px) {
+    .ant-col-xxl-5{flex: 0 0 20%; max-width: 20%;}
+}
+/********************栅格5****结束*********************/
+
+/********************相对元素栅格****开始*********************/
+.row-xs{
+    .ant-col-xs-24{flex:0 0 100%;max-width: 100%;}
+    .ant-col-xs-12{flex:0 0 50%;max-width: 50%;}
+    .ant-col-xs-8{flex:0 0 33.3%;max-width: 33.3%;}
+    .ant-col-xs-6{flex:0 0 25%;max-width: 25%;}
+    .ant-col-xs-5{flex:0 0 20%;max-width: 20%;}
+    .ant-col-xs-4{flex:0 0 16.6%;max-width: 16.6%;}
+}
+
+.row-sm{
+    .ant-col-sm-24{flex:0 0 100%;max-width: 100%;}
+    .ant-col-sm-12{flex:0 0 50%;max-width: 50%;}
+    .ant-col-sm-8{flex:0 0 33.3%;max-width: 33.3%;}
+    .ant-col-sm-6{flex:0 0 25%;max-width: 25%;}
+    .ant-col-sm-5{flex:0 0 20%;max-width: 20%;}
+    .ant-col-sm-4{flex:0 0 16.6%;max-width: 16.6%;}
+}
+
+.row-md{
+    .ant-col-md-24{flex:0 0 100%;max-width: 100%;}
+    .ant-col-md-12{flex:0 0 50%;max-width: 50%;}
+    .ant-col-md-8{flex:0 0 33.3%;max-width: 33.3%;}
+    .ant-col-md-6{flex:0 0 25%;max-width: 25%;}
+    .ant-col-md-5{flex:0 0 20%;max-width: 20%;}
+    .ant-col-md-4{flex:0 0 16.6%;max-width: 16.6%;}
+}
+
+.row-lg{
+    .ant-col-lg-24{flex:0 0 100%;max-width: 100%;}
+    .ant-col-lg-12{flex:0 0 50%;max-width: 50%;}
+    .ant-col-lg-8{flex:0 0 33.3%;max-width: 33.3%;}
+    .ant-col-lg-6{flex:0 0 25%;max-width: 25%;}
+    .ant-col-lg-5{flex:0 0 20%;max-width: 20%;}
+    .ant-col-lg-4{flex:0 0 16.6%;max-width: 16.6%;}
+}
+
+.row-xl{
+    .ant-col-xl-24{flex:0 0 100%;max-width: 100%;}
+    .ant-col-xl-12{flex:0 0 50%;max-width: 50%;}
+    .ant-col-xl-8{flex:0 0 33.3%;max-width: 33.3%;}
+    .ant-col-xl-6{flex:0 0 25%;max-width: 25%;}
+    .ant-col-xl-5{flex:0 0 20%;max-width: 20%;}
+    .ant-col-xl-4{flex:0 0 16.6%;max-width: 16.6%;}
+}
+
+.row-xxl{
+    .ant-col-xxl-24{flex:0 0 100%;max-width: 100%;}
+    .ant-col-xxl-12{flex:0 0 50%;max-width: 50%;}
+    .ant-col-xxl-8{flex:0 0 33.3%;max-width: 33.3%;}
+    .ant-col-xxl-6{flex:0 0 25%;max-width: 25%;}
+    .ant-col-xxl-5{flex:0 0 20%;max-width: 20%;}
+    .ant-col-xxl-4{flex:0 0 16.6%;max-width: 16.6%;}
+}
+/********************相对元素栅格****结束*********************/

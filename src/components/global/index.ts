@@ -1,0 +1,1 @@
+export {default as AppTooltip } from './src/AppTooltip.vue'
