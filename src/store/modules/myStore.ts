@@ -47,7 +47,6 @@ export const useMyStore = defineStore('myStore', {
         async initInfo() {
             const info = await getInfo()
             this.info = info as any as MyInfo
-            this.info.home = '/1/2'
             this.isLogin = true
         },
         //初始化菜单
