@@ -2,12 +2,12 @@
   <a-layout>
     <a-layout-header class="layout-header" :style="getTopStyle">
       <HeaderLeft></HeaderLeft>
-      <a-menu mode="horizontal" :items="menuRt.topMenu" :style="getTopStyle" theme="dark"></a-menu>
+      <a-menu mode="horizontal" :items="menuStore.getTopMenu" :style="getTopStyle" theme="dark" @select="selectTopAc"></a-menu>
       <HeaderRight></HeaderRight>
     </a-layout-header>
     <a-layout class="layout-main">
       <a-layout-sider collapsible :style="getSiderStyle">
-        <a-menu mode="inline" :items="menuRt.siderMenu" theme="dark" :style="getSiderStyle" @select="selectAc"></a-menu>
+        <a-menu mode="inline" :items="menuStore.getSiderMenu" theme="dark" :style="getSiderStyle" @select="selectAc"></a-menu>
       </a-layout-sider>
       <LayoutContent></LayoutContent>
     </a-layout>
@@ -21,8 +21,10 @@ import HeaderRight from './header/HeaderRight.vue'
 import {getTopStyle,getSiderStyle} from './hooks'
 import {useRouter} from 'vue-router'
 import {cloneDeep} from 'lodash-es'
-import router from "@/router";
 const { getRoutes, push } = useRouter();
+import {useMenuStore} from '@/store'
+
+const menuStore = useMenuStore()
 
 //菜单
 const menuRt = reactive({
@@ -44,18 +46,27 @@ const initMenu = ()=>{
 //路由转换为菜单
 const routerToMenu = (routes=[])=>{
   return routes.map(item=>{
-    const {path,meta} = item
-    return {
-      key: path,
+    const {path,meta,alias,children} = item
+    const route = {
+      key: alias || path,
       label:meta?.title,
       icon:meta?.icon
     }
+    if(children && children.length>0){
+      route['children'] = routerToMenu(children)
+    }
+    return route
   })
 }
 
 //选择菜单
 const selectAc = ({key})=>{
   push(key)
+}
+
+//选择顶级菜单
+const selectTopAc = ({key})=>{
+  menuStore.updateTopMenu(key)
 }
 
 onMounted(()=>{
